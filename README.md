@@ -2,16 +2,16 @@
 
 Un juego de apilamiento hecho con three.js
 
-## Requerimientos e intstalación
+## Requerimientos e instalación
 
 - NPM y NodeJS
 - Git for Windows
 - VSCode (opcional, pero recomendable)
 
 
-## Intstalación
+## Instalación
 
-- Clonar el repo con `git clone URL_del_repo `
+- Clonar el repo con `git clone https://github.com/jorgefalconcampos/tower-blocks`
 - Instalar TypeScript globalmente con `npm install -g typescript`
 - Moverse a la carpeta del proyecto con `cd tower-blocks`
 - Instalar todas las dependencias necesarias con `npm install`, se creará una carpeta llamada "node modules" con todas las dependencias necesarias
