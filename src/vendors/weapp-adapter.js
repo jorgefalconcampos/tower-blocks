@@ -1174,7 +1174,6 @@
 
 	var _util = __webpack_require__(9);
 
-	// TODO 需要 wx.getSystemInfo 获取更详细信息
 	var _wx$getSystemInfoSync = wx.getSystemInfoSync(),
 	    platform = _wx$getSystemInfoSync.platform;
 
@@ -1183,9 +1182,8 @@
 	  language: 'zh-cn',
 	  appVersion: '5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
 	  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E8301 MicroMessenger/6.6.0 MiniGame NetType/WIFI Language/zh_CN',
-	  onLine: true, // TODO 用 wx.getNetworkStateChange 和 wx.onNetworkStateChange 来返回真实的状态
+	  onLine: true, 
 
-	  // TODO 用 wx.getLocation 来封装 geolocation
 	  geolocation: {
 	    getCurrentPosition: _util.noop,
 	    watchPosition: _util.noop,
@@ -1231,7 +1229,6 @@
 	}
 
 	var XMLHttpRequest = function () {
-	  // TODO 没法模拟 HEADERS_RECEIVED 和 LOADING 两个状态
 	  function XMLHttpRequest() {
 	    _classCallCheck(this, XMLHttpRequest);
 
@@ -1260,7 +1257,7 @@
 	  }
 
 	  /*
-	   * TODO 这一批事件应该是在 XMLHttpRequestEventTarget.prototype 上面的
+	   * TODO XMLHttpRequestEventTarget.prototype 上面的
 	   */
 
 
@@ -1289,7 +1286,7 @@
 	    }
 	  }, {
 	    key: 'open',
-	    value: function open(method, url /* async, user, password 这几个参数在小程序内不支持*/) {
+	    value: function open(method, url /* async, user, password */) {
 	      _method.set(this, method);
 	      _url.set(this, url);
 	      _changeReadyState.call(this, XMLHttpRequest.OPENED);
@@ -1400,7 +1397,7 @@
 	var _socketTask = new WeakMap();
 
 	var WebSocket = function () {
-	  // TODO 更新 binaryType
+	  // TODO binaryType
 	  // The connection is in the process of closing.
 	  // The connection is not yet open.
 	  function WebSocket(url) {
@@ -1461,9 +1458,7 @@
 	    });
 
 	    return this;
-	  } // TODO 小程序内目前获取不到，实际上需要根据服务器选择的 sub-protocol 返回
-	  // TODO 更新 bufferedAmount
-	  // The connection is closed or couldn't be opened.
+	  } 
 
 	  // The connection is open and ready to communicate.
 
